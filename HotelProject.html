@@ -41,10 +41,10 @@
                       <option value="2">3</option>
                       <option value="3">4</option>
                       </select>
-                      <button onclick= removeNameOne()>Check Out</button>
+                      <button onclick = removeNameOne()>Check Out</button>
                       <input type="checkbox" id="checkboxOne">
                       <button onclick=removeAllOne()>Remove All Guests</button>
-                      <button onclick=displayEveryPerson>Display Every Person That Has Ever Entered</button><ol id="listOne"></ol></div>
+                      <button onclick=showAllOne()>Display All People</button><ol id="listOne"></ol></div>
     <div id="roomTwo"></div>
     <div id="roomThree"></div>
     <div id="roomFour"></div>
@@ -80,6 +80,7 @@
           ol.appendChild(newli);
           document.body.appendChild(ol);
           roomOnePeople.push(onePerson);
+          roomOnePeopleForever.push(onePerson);
         }
         else if (amountRoomOne == 4) {
             window.alert("This room is full");
@@ -88,31 +89,48 @@
       
       else if (checkboxOne.checked == true) {
         document.getElementById('userNameOne').value = "";
-        window.alert("This room is now locked for maintenace");
+        window.alert("This room is locked for maintenace");
      }
       else {
         window.alert("Please enter a name");
       }
-      
-     function removeNameOne() {
+}
+
+      function removeNameOne() {
+        if (checkboxOne.checked == false) {
         var getV = document.getElementById('removalOfNameOne').value;
-        var getLi = document.getElementsByTagName('li')[getV - 1];
+        var getLi = document.getElementsByTagName('li')[getV];
         var getParent = getLi.parentNode;
         getParent.removeChild(getLi);
         amountRoomOne--;
-    }
+        roomOnePeople.shift(getV);
+        window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+        }
+        else if (checkboxOne.checked == true) {
+        window.alert("This room is locked for maintenace");
+        }
+      }
       
+    
     function removeAllOne() {
-      for (i=0;i>4;i++) {
-      var getV = document.getElementById('removalOfNameOne').value;
-      var eliminate = document.getElementsByTagName('li')[getV-1];
-      var container = eliminate.parentNode;
-      container.removeChild(eliminate);
+      roomOnePeople.splice(0,4);
       amountRoomOne=0;
+      for (var i=0; i<roomOnePeople.length; i++){
+      var theParent = document.getElementById("listOne");
+      theParent.removeChild(roomOnePeople[i]);
       }
     }
-}
-
+      
+    function showAllOne() {
+      if (roomOnePeopleForever.length > 0) {
+      for (var i=0; i<roomOnePeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomOnePeopleForever[i]);
+      }
+      }
+      else {
+        window.alert("No has checked into the room since the script has been running, currently.")
+        }
+    }
     </script>
   
   </body>
