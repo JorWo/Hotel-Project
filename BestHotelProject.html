@@ -1,0 +1,469 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('http://www.halekulani.com/sites/default/files/front-slide/slide-1_0.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+      #Logo {
+        height:200px;
+        width:200px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-image:url('logo_transparent.png');
+        opacity:1;
+        margin-top:-2%;
+        margin-left:-2%;
+      }
+      h1 {
+        text-align:center;
+        color:black;
+      }
+      p {
+        color:black;
+      }
+      ol {
+        color:white;
+      }
+      #roomOne {
+        margin-top: 0%;
+        margin-left: 0%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+        
+      }
+      
+      #roomTwo {
+        margin-top: -20.25%;
+        margin-left:39.5%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+      }
+      
+      #roomThree {
+        margin-top: -20.25%;
+        margin-left: 79%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+      }
+      
+      }
+      button {
+        width: 78px;
+      }
+      
+      #checkboxOne {
+        float:right;
+      }
+      .switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      float:right;
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #00FF00;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #00FF00;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 17px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB6ElEQVRYR+3XS8gPURjH8c8bkYV7KVslC4US5RJhgWKDQsnCJZcFWcrCJVkqioVsZOG+eDdvLJAkJJKVkr1EIQu3okfnXy/9Z+bMO8O/5OxmznP5nud35pxn+vR49A0hf/gsxHJMSf4vcQP38L1OzLoA83AaswqSPMFuPMyFqAOwBWcwrCL4N2zDuRyIXIDV6EfYf8IJXMDz9G4aNmEPRiQZVmGgCiIHYAxeYBLeYRmi1N3GHNzEaLzCVHwsg8gB2IfjKchmnK9Y1VacTTZ7cbIpQOzs+XiDyQiNy0ZI8BpjcReLmgJ8SCW9jpVVmqb5kGEp3mNcU4DOd30Z6zMBrmFNsi2VuWwySrkEsfIY96v0HAQX+2Zuel6BW/jaDb4IYCLuYHrmiqvMnmFx+op+sS0COIb9VVFrzh/C4d99igCuYF3NBFXmF7ExF+Aq1lZFrDl/CRv+A7RZgUfpdoyYOzG7QpJWJYjk0ZR8SUlH4kFJnxBmrQJsH3ThdBa+KzUrRYX44wDRCZ0qkaFVgMdYgM8p4agkwYy/BRB5nqZNGIfZDpQlb30P1DyDfpq3KsG/D9Dzy+goDgylziU+B3Ek9ygej9uY2RJEtPGdHjGrIQmj4amjndAQ4m3qjrt20zn/BQ3zl7v3HOAHddxjIRWQtfEAAAAASUVORK5CYII=);
+        background-size:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Logo"></div>
+    <div id="roomOne"><h1>Room One</h1><input type ="text" id = "userNameOne"><button id = "buttonAddNameOne" onclick=addNameOne()>Check In</button>
+                      <select id = "removalOfNameOne">
+                      <option value="0">1</option>
+                      <option value="1">2</option>
+                      <option value="2">3</option>
+                      <option value="3">4</option>
+                      </select>
+                      <button onclick = removeNameOne() id="removeNameOne">Check Out</button>
+                      <button onclick=removeAllOne() id="removeAllOne">Remove All People</button>
+                      <button onclick=showAllOne() id="showAllOne">Display All People</button>
+                      <label class="switch">
+                      <input type="checkbox" id="checkboxOne" onclick=lockRoomOne()>
+                      <span class="slider round"></span>
+                      </label>
+                      <ol id="listOne"></ol>
+                      </div>
+                      
+                      <div id="roomTwo"><h1>Room Two</h1>
+                      <input type ="text" id = "userNameTwo"><button id = "buttonAddNameTwo" onclick=addNameTwo()>Check In</button>
+                      <select id = "removalOfNameTwo">
+                      <option value="0">1</option>
+                      <option value="1">2</option>
+                      <option value="2">3</option>
+                      <option value="3">4</option>
+                      </select>
+                      <button onclick = removeNameTwo() id="removeNameTwo">Check Out</button>
+                      <button onclick=removeAllTwo() id="removeAllTwo">Remove All People</button>
+                      <button onclick=showAllTwo() id="showAllTwo">Display All People</button>
+                      <label class="switch">
+                      <input type="checkbox" id="checkboxTwo" onclick=lockRoomTwo()>
+                      <span class="slider round"></span>
+                      </label>
+                      <ol id="listTwo"></ol></div>
+                      
+                      <div id="roomThree"><h1>Room Three</h1>
+                      <input type ="text" id = "userNameThree"><button id = "buttonAddNameThree" onclick=addNameThree()>Check In</button>
+                      <select id = "removalOfNameThree">
+                      <option value="0">1</option>
+                      <option value="1">2</option>
+                      <option value="2">3</option>
+                      <option value="3">4</option>
+                      </select>
+                      <button onclick = removeNameThree() id="removeNameThree">Check Out</button>
+                      <button onclick=removeAllThree() id="removeAllThree">Remove All People</button>
+                      <button onclick=showAllThree() id="showAllThree">Display All People</button>
+                      <label class="switch">
+                      <input type="checkbox" id="checkboxThree" onclick=lockRoomThree()>
+                      <span class="slider round"></span>
+                      </label>
+                      <ol id="listThree"></ol></div>
+    <div id="roomFour"></div>
+    <div id="roomFive"></div>
+    <div id="roomSix"></div>
+    <script>
+    var amountRoomOne = 0;
+    var roomOnePeople = [];
+    var roomOnePeopleForever = [];
+    var amountRoomTwo = 0;
+    var roomTwoPeopleForever = [];
+    var amountRoomThree = 0;
+    var roomThreePeopleForever = [];
+    var amountRoomFour = 0;
+    var amountRoomFive = 0;
+    var amountRoomSix = 0;
+    
+    
+//Room One Code
+      function addNameOne() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameOne.value !== "" && amountRoomOne < 4) {
+          amountRoomOne++
+          var onePerson = document.getElementById('userNameOne').value;
+          roomOnePeopleForever.push(onePerson);
+          document.getElementById('userNameOne').value = "";
+          var olOne = document.getElementById('listOne');
+          var newliOne = document.createElement('li');
+          newliOne.setAttribute("class", "listOne");
+          var newTextOne = document.createTextNode(onePerson + " " + dateString + " " + n);
+          newliOne.appendChild(newTextOne);
+          olOne.appendChild(newliOne);
+          document.roomOne.appendChild(olOne);
+          
+        }
+        else if (amountRoomOne == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameOne() {
+        if (amountRoomOne !==0) {
+        var getV = document.getElementById('removalOfNameOne').value;
+        var getLi = document.getElementsByClassName('listOne')[getV];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+        amountRoomOne--;
+        roomOnePeople.shift(getV);
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        }
+       else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllOne() {
+      if(amountRoomOne !== 0) {
+      amountRoomOne=0;
+      document.getElementById('listOne').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomOne == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllOne() {
+      if (roomOnePeopleForever.length > 0) {
+      for (var i=0; i<roomOnePeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomOnePeopleForever[i]);
+      }
+      }
+      else if (roomOnePeopleForever.length == 0) {
+        window.alert("No has checked into the room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomOne() {
+      if (checkboxOne.checked == true) {
+      window.alert("Room 1 is now locked for maintenance");
+      document.getElementById('removalOfNameOne').disabled=true;
+      document.getElementById('userNameOne').disabled=true;
+      document.getElementById('removeNameOne').disabled=true;
+      document.getElementById('removeAllOne').disabled=true;
+      document.getElementById('showAllOne').disabled=true;
+      document.getElementById('buttonAddNameOne').disabled=true;
+    }
+    else if (checkboxOne.checked == false) {
+      document.getElementById('removalOfNameOne').disabled=false;
+      document.getElementById('userNameOne').disabled=false;
+      document.getElementById('removeNameOne').disabled=false;
+      document.getElementById('removeAllOne').disabled=false;
+      document.getElementById('showAllOne').disabled=false;
+      document.getElementById('removalOfNameOne').disabled=false;
+      document.getElementById('buttonAddNameOne').disabled=false;
+      
+    }
+    }
+
+//Room Two Code
+function addNameTwo() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameTwo.value !== "" && amountRoomTwo < 4) {
+          amountRoomTwo++
+          var twoPerson = document.getElementById('userNameTwo').value;
+          roomTwoPeopleForever.push(twoPerson);
+          document.getElementById('userNameTwo').value = "";
+          var olTwo = document.getElementById('listTwo');
+          var newliTwo = document.createElement('li');
+          newliTwo.setAttribute("class", "listTwo");
+          var newTextTwo = document.createTextNode(twoPerson + " " + dateString + " " + n);
+          newliTwo.appendChild(newTextTwo);
+          olTwo.appendChild(newliTwo);
+          document.roomTwo.appendChild(ol);
+          
+        }
+        else if (amountRoomTwo == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameTwo() {
+        if (amountRoomTwo !==0) {
+        var getVTwo = document.getElementById('removalOfNameTwo').value;
+        var getLiTwo = document.getElementsByClassName('listTwo')[getVTwo];
+        var getParentTwo = getLiTwo.parentNode;
+        getParentTwo.removeChild(getLiTwo);
+        amountRoomTwo--;
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        }
+       else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllTwo() {
+      if(amountRoomTwo !== 0) {
+      amountRoomTwo=0;
+      document.getElementById('listTwo').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomTwo == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllTwo() {
+      if (roomTwoPeopleForever.length > 0) {
+      for (var i=0; i<roomTwoPeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomTwoPeopleForever[i]);
+      }
+      }
+      else if (roomTwoPeopleForever.length == 0) {
+        window.alert("No has checked into the room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomTwo() {
+      if (checkboxTwo.checked == true) {
+      window.alert("Room 2 is now locked for maintenance");
+      document.getElementById('removalOfNameTwo').disabled=true;
+      document.getElementById('userNameTwo').disabled=true;
+      document.getElementById('removeNameTwo').disabled=true;
+      document.getElementById('removeAllTwo').disabled=true;
+      document.getElementById('showAllTwo').disabled=true;
+      document.getElementById('buttonAddNameTwo').disabled=true;
+    }
+    else if (checkboxTwo.checked == false) {
+      document.getElementById('removalOfNameTwo').disabled=false;
+      document.getElementById('userNameTwo').disabled=false;
+      document.getElementById('removeNameTwo').disabled=false;
+      document.getElementById('removeAllTwo').disabled=false;
+      document.getElementById('showAllTwo').disabled=false;
+      document.getElementById('removalOfNameTwo').disabled=false;
+      document.getElementById('buttonAddNameTwo').disabled=false;
+      
+    }
+    }
+    
+    //Room Three Code
+    function addNameThree() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameThree.value !== "" && amountRoomThree < 4) {
+          amountRoomThree++
+          var ThreePerson = document.getElementById('userNameThree').value;
+          roomThreePeopleForever.push(ThreePerson);
+          document.getElementById('userNameThree').value = "";
+          var olThree = document.getElementById('listThree');
+          var newliThree = document.createElement('li');
+          newliThree.setAttribute("class", "listThree");
+          var newTextThree = document.createTextNode(ThreePerson + " " + dateString + " " + n);
+          newliThree.appendChild(newTextThree);
+          olThree.appendChild(newliThree);
+          document.roomThree.appendChild(olThree);
+          
+        }
+        else if (amountRoomThree == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameThree() {
+        if (amountRoomThree !==0) {
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        var getV = document.getElementById('removalOfNameThree').value;
+        var getLi = document.getElementsByClassName('listThree')[getV];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+        amountRoomThree--;
+        roomThreePeople.shift(getV);
+        }
+        else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllThree() {
+      if(amountRoomThree !== 0) {
+      amountRoomThree=0;
+      document.getElementById('listThree').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomThree == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllThree() {
+      if (roomThreePeopleForever.length > 0) {
+      for (var i=0; i<roomThreePeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomThreePeopleForever[i]);
+      }
+      }
+      else if (roomThreePeopleForever.length == 0) {
+        window.alert("No has checked into the room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomThree() {
+      if (checkboxThree.checked == true) {
+      window.alert("Room 3 is now locked for maintenance");
+      document.getElementById('removalOfNameThree').disabled=true;
+      document.getElementById('userNameThree').disabled=true;
+      document.getElementById('removeNameThree').disabled=true;
+      document.getElementById('removeAllThree').disabled=true;
+      document.getElementById('showAllThree').disabled=true;
+      document.getElementById('buttonAddNameThree').disabled=true;
+    }
+    else if (checkboxThree.checked == false) {
+      document.getElementById('removalOfNameThree').disabled=false;
+      document.getElementById('userNameThree').disabled=false;
+      document.getElementById('removeNameThree').disabled=false;
+      document.getElementById('removeAllThree').disabled=false;
+      document.getElementById('showAllThree').disabled=false;
+      document.getElementById('removalOfNameThree').disabled=false;
+      document.getElementById('buttonAddNameThree').disabled=false;
+    }
+    }
+    </script>
+  
+  </body>
+</html>
