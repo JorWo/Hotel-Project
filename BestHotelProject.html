@@ -32,23 +32,52 @@
         width:280px;
         height:250px;
         background: rgba(76, 175, 80, 0.6);
-        
+        float: left;
       }
       
       #roomTwo {
-        margin-top: -20.25%;
-        margin-left:39.5%;
+        margin-top: 0%;
+        margin-left:19%;
         width:280px;
         height:250px;
         background: rgba(76, 175, 80, 0.6);
+        float:left;
       }
       
       #roomThree {
-        margin-top: -20.25%;
+        margin-top: -18.5%;
         margin-left: 79%;
         width:280px;
         height:250px;
         background: rgba(76, 175, 80, 0.6);
+        float:left;
+      }
+      
+      #roomFour {
+        margin-top: 2%;
+        margin-left: 0%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+        float:left;
+      }
+      
+      #roomFive {
+        margin-top: 2%;
+        margin-left:19%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+        float:left;
+      }
+      
+      #roomSix {
+        margin-top: -18.5%;
+        margin-left:79%;
+        width:280px;
+        height:250px;
+        background: rgba(76, 175, 80, 0.6);
+        float:left;
       }
       
       }
@@ -127,70 +156,124 @@
   </head>
   <body>
     <div id="Logo"></div>
-    <div id="roomOne"><h1>Room One</h1><input type ="text" id = "userNameOne"><button id = "buttonAddNameOne" onclick=addNameOne()>Check In</button>
-                      <select id = "removalOfNameOne">
-                      <option value="0">1</option>
-                      <option value="1">2</option>
-                      <option value="2">3</option>
-                      <option value="3">4</option>
-                      </select>
-                      <button onclick = removeNameOne() id="removeNameOne">Check Out</button>
-                      <button onclick=removeAllOne() id="removeAllOne">Remove All People</button>
-                      <button onclick=showAllOne() id="showAllOne">Display All People</button>
-                      <label class="switch">
-                      <input type="checkbox" id="checkboxOne" onclick=lockRoomOne()>
-                      <span class="slider round"></span>
-                      </label>
-                      <ol id="listOne"></ol>
-                      </div>
+      <div id="roomOne"><h1>Room One</h1>
+      <input type ="text" id = "userNameOne">
+      <button id = "buttonAddNameOne" onclick=addNameOne()>Check In</button>
+      <select id = "removalOfNameOne">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameOne() id="removeNameOne">Check Out</button>
+      <button onclick=removeAllOne() id="removeAllOne">Remove All People</button>
+      <button onclick=showAllOne() id="showAllOne">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxOne" onclick=lockRoomOne()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listOne"></ol>
+      </div>
                       
-                      <div id="roomTwo"><h1>Room Two</h1>
-                      <input type ="text" id = "userNameTwo"><button id = "buttonAddNameTwo" onclick=addNameTwo()>Check In</button>
-                      <select id = "removalOfNameTwo">
-                      <option value="0">1</option>
-                      <option value="1">2</option>
-                      <option value="2">3</option>
-                      <option value="3">4</option>
-                      </select>
-                      <button onclick = removeNameTwo() id="removeNameTwo">Check Out</button>
-                      <button onclick=removeAllTwo() id="removeAllTwo">Remove All People</button>
-                      <button onclick=showAllTwo() id="showAllTwo">Display All People</button>
-                      <label class="switch">
-                      <input type="checkbox" id="checkboxTwo" onclick=lockRoomTwo()>
-                      <span class="slider round"></span>
-                      </label>
-                      <ol id="listTwo"></ol></div>
+      <div id="roomTwo"><h1>Room Two</h1>
+      <input type ="text" id = "userNameTwo">
+      <button id = "buttonAddNameTwo" onclick=addNameTwo()>Check In</button>
+      <select id = "removalOfNameTwo">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameTwo() id="removeNameTwo">Check Out</button>
+      <button onclick=removeAllTwo() id="removeAllTwo">Remove All People</button>
+      <button onclick=showAllTwo() id="showAllTwo">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxTwo" onclick=lockRoomTwo()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listTwo"></ol></div>
                       
-                      <div id="roomThree"><h1>Room Three</h1>
-                      <input type ="text" id = "userNameThree"><button id = "buttonAddNameThree" onclick=addNameThree()>Check In</button>
-                      <select id = "removalOfNameThree">
-                      <option value="0">1</option>
-                      <option value="1">2</option>
-                      <option value="2">3</option>
-                      <option value="3">4</option>
-                      </select>
-                      <button onclick = removeNameThree() id="removeNameThree">Check Out</button>
-                      <button onclick=removeAllThree() id="removeAllThree">Remove All People</button>
-                      <button onclick=showAllThree() id="showAllThree">Display All People</button>
-                      <label class="switch">
-                      <input type="checkbox" id="checkboxThree" onclick=lockRoomThree()>
-                      <span class="slider round"></span>
-                      </label>
-                      <ol id="listThree"></ol></div>
-    <div id="roomFour"></div>
-    <div id="roomFive"></div>
-    <div id="roomSix"></div>
+      <div id="roomThree"><h1>Room Three</h1>
+      <input type ="text" id = "userNameThree"><button id = "buttonAddNameThree" onclick=addNameThree()>Check In</button>
+      <select id = "removalOfNameThree">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameThree() id="removeNameThree">Check Out</button>
+      <button onclick=removeAllThree() id="removeAllThree">Remove All People</button>
+      <button onclick=showAllThree() id="showAllThree">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxThree" onclick=lockRoomThree()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listThree"></ol></div>
+     
+      <div id="roomFour"><h1>Room Four</h1>
+      <input type ="text" id = "userNameFour"><button id = "buttonAddNameFour" onclick=addNameFour()>Check In</button>
+      <select id = "removalOfNameFour">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameFour() id="removeNameFour">Check Out</button>
+      <button onclick=removeAllFour() id="removeAllFour">Remove All People</button>
+      <button onclick=showAllFour() id="showAllFour">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxFour" onclick=lockRoomFour()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listFour"></ol></div>
+
+      <div id="roomFive"><h1>Room Five</h1>
+      <input type ="text" id = "userNameFive"><button id = "buttonAddNameFive" onclick=addNameFive()>Check In</button>
+      <select id = "removalOfNameFive">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameFive() id="removeNameFive">Check Out</button>
+      <button onclick=removeAllFive() id="removeAllFive">Remove All People</button>
+      <button onclick=showAllFive() id="showAllFive">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxFive" onclick=lockRoomFive()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listFive"></ol></div>
+      
+      <div id="roomSix"><h1>Room Six</h1>
+      <input type ="text" id = "userNameSix"><button id = "buttonAddNameSix" onclick=addNameSix()>Check In</button>
+      <select id = "removalOfNameSix">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
+      <button onclick = removeNameSix() id="removeNameSix">Check Out</button>
+      <button onclick=removeAllSix() id="removeAllSix">Remove All People</button>
+      <button onclick=showAllSix() id="showAllSix">Guest Log</button>
+      <label class="switch">
+      <input type="checkbox" id="checkboxSix" onclick=lockRoomSix()>
+      <span class="slider round"></span>
+      </label>
+      <ol id="listSix"></ol></div>
+    
     <script>
     var amountRoomOne = 0;
-    var roomOnePeople = [];
     var roomOnePeopleForever = [];
     var amountRoomTwo = 0;
     var roomTwoPeopleForever = [];
     var amountRoomThree = 0;
     var roomThreePeopleForever = [];
     var amountRoomFour = 0;
+    var roomFourPeopleForever = [];
     var amountRoomFive = 0;
+    var roomFivePeopleForever = [];
     var amountRoomSix = 0;
+    var roomSixPeopleForever = [];
     
     
 //Room One Code
@@ -226,13 +309,12 @@
 
       function removeNameOne() {
         if (amountRoomOne !==0) {
+        window.alert("Thank you for choosing our hotel. Hope you return!");
         var getV = document.getElementById('removalOfNameOne').value;
         var getLi = document.getElementsByClassName('listOne')[getV];
         var getParent = getLi.parentNode;
         getParent.removeChild(getLi);
         amountRoomOne--;
-        roomOnePeople.shift(getV);
-        window.alert("Thank you for choosing our hotel. Hope you return!");
         }
        else {
          window.alert("There is no to check out from this room");
@@ -258,7 +340,7 @@
       }
       }
       else if (roomOnePeopleForever.length == 0) {
-        window.alert("No has checked into the room since the script has been running, currently.")
+        window.alert("No has checked into this room since the script has been running, currently.")
         }
     }
     
@@ -348,7 +430,7 @@ function addNameTwo() {
       }
       }
       else if (roomTwoPeopleForever.length == 0) {
-        window.alert("No has checked into the room since the script has been running, currently.")
+        window.alert("No has checked into this room since the script has been running, currently.")
         }
     }
     
@@ -374,7 +456,7 @@ function addNameTwo() {
     }
     }
     
-    //Room Three Code
+//Room Three Code
     function addNameThree() {
       var currentDate = new Date();
       var date = currentDate.getDate();
@@ -413,7 +495,6 @@ function addNameTwo() {
         var getParent = getLi.parentNode;
         getParent.removeChild(getLi);
         amountRoomThree--;
-        roomThreePeople.shift(getV);
         }
         else {
          window.alert("There is no to check out from this room");
@@ -439,7 +520,7 @@ function addNameTwo() {
       }
       }
       else if (roomThreePeopleForever.length == 0) {
-        window.alert("No has checked into the room since the script has been running, currently.")
+        window.alert("No has checked into this room since the script has been running, currently.")
         }
     }
     
@@ -461,6 +542,273 @@ function addNameTwo() {
       document.getElementById('showAllThree').disabled=false;
       document.getElementById('removalOfNameThree').disabled=false;
       document.getElementById('buttonAddNameThree').disabled=false;
+    }
+    }
+    
+//Room Four Code
+    function addNameFour() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameFour.value !== "" && amountRoomFour < 4) {
+          amountRoomFour++
+          var FourPerson = document.getElementById('userNameFour').value;
+          roomFourPeopleForever.push(FourPerson);
+          document.getElementById('userNameFour').value = "";
+          var olFour = document.getElementById('listFour');
+          var newliFour = document.createElement('li');
+          newliFour.setAttribute("class", "listFour");
+          var newTextFour = document.createTextNode(FourPerson + " " + dateString + " " + n);
+          newliFour.appendChild(newTextFour);
+          olFour.appendChild(newliFour);
+          document.roomFour.appendChild(olFour);
+          
+        }
+        else if (amountRoomFour == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameFour() {
+        if (amountRoomFour !==0) {
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        var getV = document.getElementById('removalOfNameFour').value;
+        var getLi = document.getElementsByClassName('listFour')[getV];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+        amountRoomFour--;
+        }
+        else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllFour() {
+      if(amountRoomFour !== 0) {
+      amountRoomFour=0;
+      document.getElementById('listFour').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomFour == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllFour() {
+      if (roomFourPeopleForever.length > 0) {
+      for (var i=0; i<roomFourPeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomFourPeopleForever[i]);
+      }
+      }
+      else if (roomFourPeopleForever.length == 0) {
+        window.alert("No has checked into this room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomFour() {
+      if (checkboxFour.checked == true) {
+      window.alert("Room 4 is now locked for maintenance");
+      document.getElementById('removalOfNameFour').disabled=true;
+      document.getElementById('userNameFour').disabled=true;
+      document.getElementById('removeNameFour').disabled=true;
+      document.getElementById('removeAllFour').disabled=true;
+      document.getElementById('showAllFour').disabled=true;
+      document.getElementById('buttonAddNameFour').disabled=true;
+    }
+    else if (checkboxFour.checked == false) {
+      document.getElementById('removalOfNameFour').disabled=false;
+      document.getElementById('userNameFour').disabled=false;
+      document.getElementById('removeNameFour').disabled=false;
+      document.getElementById('removeAllFour').disabled=false;
+      document.getElementById('showAllFour').disabled=false;
+      document.getElementById('removalOfNameFour').disabled=false;
+      document.getElementById('buttonAddNameFour').disabled=false;
+    }
+    }
+    
+    //Room Five Code
+    function addNameFive() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameFive.value !== "" && amountRoomFive < 4) {
+          amountRoomFive++
+          var FivePerson = document.getElementById('userNameFive').value;
+          roomFivePeopleForever.push(FivePerson);
+          document.getElementById('userNameFive').value = "";
+          var olFive = document.getElementById('listFive');
+          var newliFive = document.createElement('li');
+          newliFive.setAttribute("class", "listFive");
+          var newTextFive = document.createTextNode(FivePerson + " " + dateString + " " + n);
+          newliFive.appendChild(newTextFive);
+          olFive.appendChild(newliFive);
+          document.roomFive.appendChild(olFive);
+          
+        }
+        else if (amountRoomFive == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameFive() {
+        if (amountRoomFive !==0) {
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        var getV = document.getElementById('removalOfNameFive').value;
+        var getLi = document.getElementsByClassName('listFive')[getV];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+        amountRoomFive--;
+        }
+        else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllFive() {
+      if(amountRoomFive !== 0) {
+      amountRoomFive=0;
+      document.getElementById('listFive').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomFive == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllFive() {
+      if (roomFivePeopleForever.length > 0) {
+      for (var i=0; i<roomFivePeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomFivePeopleForever[i]);
+      }
+      }
+      else if (roomFivePeopleForever.length == 0) {
+        window.alert("No has checked into this room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomFive() {
+      if (checkboxFive.checked == true) {
+      window.alert("Room 5 is now locked for maintenance");
+      document.getElementById('removalOfNameFive').disabled=true;
+      document.getElementById('userNameFive').disabled=true;
+      document.getElementById('removeNameFive').disabled=true;
+      document.getElementById('removeAllFive').disabled=true;
+      document.getElementById('showAllFive').disabled=true;
+      document.getElementById('buttonAddNameFive').disabled=true;
+    }
+    else if (checkboxFive.checked == false) {
+      document.getElementById('removalOfNameFive').disabled=false;
+      document.getElementById('userNameFive').disabled=false;
+      document.getElementById('removeNameFive').disabled=false;
+      document.getElementById('removeAllFive').disabled=false;
+      document.getElementById('showAllFive').disabled=false;
+      document.getElementById('removalOfNameFive').disabled=false;
+      document.getElementById('buttonAddNameFive').disabled=false;
+    }
+    }
+    
+    //Room Six Code
+    function addNameSix() {
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var n = currentDate.toLocaleTimeString();
+      var dateString = (month + 1) + "/" + date + "/" + year;
+        if (userNameSix.value !== "" && amountRoomSix < 4) {
+          amountRoomSix++
+          var SixPerson = document.getElementById('userNameSix').value;
+          roomSixPeopleForever.push(SixPerson);
+          document.getElementById('userNameSix').value = "";
+          var olSix = document.getElementById('listSix');
+          var newliSix = document.createElement('li');
+          newliSix.setAttribute("class", "listSix");
+          var newTextSix = document.createTextNode(SixPerson + " " + dateString + " " + n);
+          newliSix.appendChild(newTextSix);
+          olSix.appendChild(newliSix);
+          document.roomSix.appendChild(olSix);
+          
+        }
+        else if (amountRoomSix == 4) {
+            window.alert("This room is full");
+          }
+      
+      else {
+        window.alert("Please enter a name");
+      }
+    }
+
+      function removeNameSix() {
+        if (amountRoomSix !==0) {
+        window.alert("Thank you for choosing our hotel. Hope you return!");
+        var getV = document.getElementById('removalOfNameSix').value;
+        var getLi = document.getElementsByClassName('listSix')[getV];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+        amountRoomSix--;
+        }
+        else {
+         window.alert("There is no to check out from this room");
+       }
+      }
+      
+    function removeAllSix() {
+      if(amountRoomSix !== 0) {
+      amountRoomSix=0;
+      document.getElementById('listSix').innerHTML = "";
+      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      }
+      else if(amountRoomSix == 0){
+        window.alert("There is nothing to clear in this room");
+      }
+    }
+    
+    
+    function showAllSix() {
+      if (roomSixPeopleForever.length > 0) {
+      for (var i=0; i<roomSixPeopleForever.length; i++){
+      window.alert(i+1 + ". " + roomSixPeopleForever[i]);
+      }
+      }
+      else if (roomSixPeopleForever.length == 0) {
+        window.alert("No has checked into this room since the script has been running, currently.")
+        }
+    }
+    
+    function lockRoomSix() {
+      if (checkboxSix.checked == true) {
+      window.alert("Room 6 is now locked for maintenance");
+      document.getElementById('removalOfNameSix').disabled=true;
+      document.getElementById('userNameSix').disabled=true;
+      document.getElementById('removeNameSix').disabled=true;
+      document.getElementById('removeAllSix').disabled=true;
+      document.getElementById('showAllSix').disabled=true;
+      document.getElementById('buttonAddNameSix').disabled=true;
+    }
+    else if (checkboxSix.checked == false) {
+      document.getElementById('removalOfNameSix').disabled=false;
+      document.getElementById('userNameSix').disabled=false;
+      document.getElementById('removeNameSix').disabled=false;
+      document.getElementById('removeAllSix').disabled=false;
+      document.getElementById('showAllSix').disabled=false;
+      document.getElementById('removalOfNameSix').disabled=false;
+      document.getElementById('buttonAddNameSix').disabled=false;
     }
     }
     </script>
