@@ -5,7 +5,9 @@
         background-image: url('http://www.halekulani.com/sites/default/files/front-slide/slide-1_0.jpg');
         background-size:cover;
         background-repeat:no-repeat;
-        
+        width:100%;
+        height:auto;
+        min-width:1000px;
       }
       
       #Logo {
@@ -55,8 +57,8 @@
       #roomOne {
         margin-top: 10%;
         margin-left: 0%;
-        width:280px;
-        height:250px;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float: left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -68,8 +70,8 @@
       #roomTwo {
         margin-top: 10%;
         margin-left:18%;
-        width:280px;
-        height:250px;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float:left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -79,10 +81,10 @@
       }
       
       #roomThree {
-        margin-top: -18.5%;
-        margin-left: 78%;
-        width:280px;
-        height:250px;
+        margin-top: 10%;
+        margin-left: 12%;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float:left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -94,8 +96,8 @@
       #roomFour {
         margin-top: 2%;
         margin-left: 0%;
-        width:280px;
-        height:250px;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float:left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -107,8 +109,8 @@
       #roomFive {
         margin-top: 2%;
         margin-left:18%;
-        width:280px;
-        height:250px;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float:left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -118,10 +120,10 @@
       }
       
       #roomSix {
-        margin-top: -18.5%;
-        margin-left:78%;
-        width:280px;
-        height:250px;
+        margin-top: 2%;
+        margin-left:12%;
+        width:22%;
+        height:33%;
         background: rgba(0,204,204,0.8);
         float:left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -210,15 +212,13 @@
     
     <div id="navBar"><div id="Logo"></div><p>Admin Page</p></div>
       <div id="roomOne"><h1>Room One</h1>
-      <input type ="text" id = "userNameOne">
-      <button id = "buttonAddNameOne" onclick=addNameOne()>Check In</button>
+      <input type ="text" id = "userNameOne"><button id = "buttonAddNameOne" onclick=addNameOne()>Check In</button>
       <select id = "removalOfNameOne">
       <option value="0">1</option>
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameOne() id="removeNameOne">Check Out</button>
+      </select><button onclick = removeNameOne() id="removeNameOne">Check Out</button>
       <button onclick=removeAllOne() id="removeAllOne">Remove All People</button>
       <button onclick=showAllOne() id="showAllOne">Guest Log</button>
       <label class="switch">
@@ -229,22 +229,21 @@
       </div>
                       
       <div id="roomTwo"><h1>Room Two</h1>
-      <input type ="text" id = "userNameTwo">
-      <button id = "buttonAddNameTwo" onclick=addNameTwo()>Check In</button>
+      <input type ="text" id = "userNameTwo"><button id = "buttonAddNameTwo" onclick=addNameTwo()>Check In</button>
       <select id = "removalOfNameTwo">
       <option value="0">1</option>
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameTwo() id="removeNameTwo">Check Out</button>
+      </select><button onclick = removeNameTwo() id="removeNameTwo">Check Out</button>
       <button onclick=removeAllTwo() id="removeAllTwo">Remove All People</button>
       <button onclick=showAllTwo() id="showAllTwo">Guest Log</button>
       <label class="switch">
       <input type="checkbox" id="checkboxTwo" onclick=lockRoomTwo()>
       <span class="slider round"></span>
       </label>
-      <ol id="listTwo"></ol></div>
+      <ol id="listTwo"></ol>
+      </div>
                       
       <div id="roomThree"><h1>Room Three</h1>
       <input type ="text" id = "userNameThree"><button id = "buttonAddNameThree" onclick=addNameThree()>Check In</button>
@@ -253,15 +252,15 @@
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameThree() id="removeNameThree">Check Out</button>
+      </select><button onclick = removeNameThree() id="removeNameThree">Check Out</button>
       <button onclick=removeAllThree() id="removeAllThree">Remove All People</button>
       <button onclick=showAllThree() id="showAllThree">Guest Log</button>
       <label class="switch">
       <input type="checkbox" id="checkboxThree" onclick=lockRoomThree()>
       <span class="slider round"></span>
       </label>
-      <ol id="listThree"></ol></div>
+      <ol id="listThree"></ol>
+      </div>
      
       <div id="roomFour"><h1>Room Four</h1>
       <input type ="text" id = "userNameFour"><button id = "buttonAddNameFour" onclick=addNameFour()>Check In</button>
@@ -270,8 +269,7 @@
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameFour() id="removeNameFour">Check Out</button>
+      </select><button onclick = removeNameFour() id="removeNameFour">Check Out</button>
       <button onclick=removeAllFour() id="removeAllFour">Remove All People</button>
       <button onclick=showAllFour() id="showAllFour">Guest Log</button>
       <label class="switch">
@@ -287,8 +285,7 @@
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameFive() id="removeNameFive">Check Out</button>
+      </select><button onclick = removeNameFive() id="removeNameFive">Check Out</button>
       <button onclick=removeAllFive() id="removeAllFive">Remove All People</button>
       <button onclick=showAllFive() id="showAllFive">Guest Log</button>
       <label class="switch">
@@ -304,8 +301,7 @@
       <option value="1">2</option>
       <option value="2">3</option>
       <option value="3">4</option>
-      </select>
-      <button onclick = removeNameSix() id="removeNameSix">Check Out</button>
+      </select><button onclick = removeNameSix() id="removeNameSix">Check Out</button>
       <button onclick=removeAllSix() id="removeAllSix">Remove All People</button>
       <button onclick=showAllSix() id="showAllSix">Guest Log</button>
       <label class="switch">
@@ -387,7 +383,7 @@
         if (userNameOne.value !== "" && amountRoomOne < 4) {
           amountRoomOne++
           var onePerson = document.getElementById('userNameOne').value;
-          roomOnePeopleForever.push(onePerson);
+          roomOnePeopleForever.push(onePerson + " " + dateString + " " + n);
           document.getElementById('userNameOne').value = "";
           var olOne = document.getElementById('listOne');
           var newliOne = document.createElement('li');
@@ -431,7 +427,7 @@
       var confirmOne = confirm("Are you sure?");
       if (confirmOne == true) {
       document.getElementById('listOne').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomOne == 0){
@@ -485,7 +481,7 @@ function addNameTwo() {
         if (userNameTwo.value !== "" && amountRoomTwo < 4) {
           amountRoomTwo++
           var twoPerson = document.getElementById('userNameTwo').value;
-          roomTwoPeopleForever.push(twoPerson);
+          roomTwoPeopleForever.push(twoPerson + " " + dateString + " " + n);
           document.getElementById('userNameTwo').value = "";
           var olTwo = document.getElementById('listTwo');
           var newliTwo = document.createElement('li');
@@ -529,7 +525,7 @@ function addNameTwo() {
       var confirmTwo = confirm("Are you sure?");
       if (confirmTwo == true) {
       document.getElementById('listTwo').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomTwo == 0){
@@ -582,7 +578,7 @@ function addNameTwo() {
         if (userNameThree.value !== "" && amountRoomThree < 4) {
           amountRoomThree++
           var ThreePerson = document.getElementById('userNameThree').value;
-          roomThreePeopleForever.push(ThreePerson);
+          roomThreePeopleForever.push(ThreePerson + " " + dateString + " " + n);
           document.getElementById('userNameThree').value = "";
           var olThree = document.getElementById('listThree');
           var newliThree = document.createElement('li');
@@ -626,7 +622,7 @@ function addNameTwo() {
       var confirmThree = confirm("Are you sure?");
       if (confirmThree == true) {
       document.getElementById('listThree').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomThree == 0){
@@ -678,7 +674,7 @@ function addNameTwo() {
         if (userNameFour.value !== "" && amountRoomFour < 4) {
           amountRoomFour++
           var FourPerson = document.getElementById('userNameFour').value;
-          roomFourPeopleForever.push(FourPerson);
+          roomFourPeopleForever.push(FourPerson + " " + dateString + " " + n);
           document.getElementById('userNameFour').value = "";
           var olFour = document.getElementById('listFour');
           var newliFour = document.createElement('li');
@@ -722,7 +718,7 @@ function addNameTwo() {
       var confirmFour = confirm("Are you sure?");
       if (confirmFour == true) {
       document.getElementById('listFour').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomFour == 0){
@@ -774,7 +770,7 @@ function addNameTwo() {
         if (userNameFive.value !== "" && amountRoomFive < 4) {
           amountRoomFive++
           var FivePerson = document.getElementById('userNameFive').value;
-          roomFivePeopleForever.push(FivePerson);
+          roomFivePeopleForever.push(FivePerson + " " + dateString + " " + n);
           document.getElementById('userNameFive').value = "";
           var olFive = document.getElementById('listFive');
           var newliFive = document.createElement('li');
@@ -818,7 +814,7 @@ function addNameTwo() {
       var confirmFive = confirm("Are you sure?");
       if (confirmFive == true) {
       document.getElementById('listFive').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomFive == 0){
@@ -870,7 +866,7 @@ function addNameTwo() {
         if (userNameSix.value !== "" && amountRoomSix < 4) {
           amountRoomSix++
           var SixPerson = document.getElementById('userNameSix').value;
-          roomSixPeopleForever.push(SixPerson);
+          roomSixPeopleForever.push(SixPerson + " " + dateString + " " + n);
           document.getElementById('userNameSix').value = "";
           var olSix = document.getElementById('listSix');
           var newliSix = document.createElement('li');
@@ -914,7 +910,7 @@ function addNameTwo() {
       var confirmSix = confirm("Are you sure?");
       if (confirmSix == true) {
       document.getElementById('listSix').innerHTML = "";
-      window.alert("Thank You For Choosing Our Hotel. Hope You Return!");
+      window.alert("Say: Thank You For Choosing Our Hotel. Hope You Return!");
       }
       }
       else if(amountRoomSix == 0){
